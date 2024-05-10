@@ -1,0 +1,58 @@
+; Q1 (5 points)
+; Enter your code here
+
+
+; Q2 (5 points)
+(define Multiply
+  ; Enter your code here
+
+
+
+(Multiply 10 40)
+
+; Q3 (5 points)
+(define Exponent
+; Enter your code here
+
+
+(Exponent 2 5)
+
+; Q4: Please enter test values 2 and 5. It should return 32. (5 points)
+(display "Enter 2 5 as test case. It returns 32")
+(newline)
+(define (ReadForExponent)
+; Enter your code here
+
+
+(ReadForExponent)
+
+; Q5 (5 points)
+(define MultiplyExponents
+; Enter your code here
+
+
+(MultiplyExponents 2 5 3 4)
+
+;Q6 (5 points)
+(define (MultiplyLet x y)
+; Enter your code here
+
+
+
+(MultiplyLet 60 40)
+
+; Q7 (10 points)
+(define (Letexpression)
+; Enter your code here
+
+
+
+(Letexpression)
+
+; Q8: Enter values 1 2 3 4 5 6 7 8, and it should return 20. (10 points)
+(display "Eenter 1 2 3 4 5 6 7 8 and e, and it returns 20.")
+(newline)
+(define accumulator	; recursive
+; Enter your code here
+  
+(accumulator 0 0) 

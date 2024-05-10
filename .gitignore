@@ -1,0 +1,13 @@
+*.zip
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.jpg
+*.png
+*.pdf
+*.docx
+
+.vs/
+Debug/
+Submission/

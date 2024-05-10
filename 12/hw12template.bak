@@ -1,0 +1,121 @@
+;Your Name: 
+;Course: CSE 240
+; Use the template for your programming assignment
+
+;Q1 (6 points)
+(define OR-GATE (lambda (a b)
+
+(define AND-GATE (lambda (a b)
+
+(define XOR-GATE (lambda (a b)
+
+;Test cases
+(AND-GATE 0 0)
+(AND-GATE 0 1)
+(AND-GATE 1 0)
+(AND-GATE 1 1)
+;0
+;0
+;0
+;1
+(newline)
+(OR-GATE 0 0)
+(OR-GATE 0 1)
+(OR-GATE 1 0)
+(OR-GATE 1 1)
+;0
+;1
+;1
+;1
+(newline)
+(XOR-GATE 0 0)
+(XOR-GATE 0 1)
+(XOR-GATE 1 0)
+(XOR-GATE 1 1)
+;0
+;1
+;1
+;0
+
+;Q2 
+(define bitAdder (lambda (x a b) ;(4 points each)
+
+(define sum-bits (lambda (x a b) ;(5 points each)
+
+(define carry-out (lambda (x a b) ;(5 points each)
+
+;Test cases
+(newline)
+(bitAdder 0 0 0) 	
+(bitAdder 0 0 1) 	
+(bitAdder 0 1 0) 	
+(bitAdder 0 1 1)	
+(bitAdder 1 0 0) 	
+(bitAdder 1 0 1)	
+(bitAdder 1 1 0) 	
+(bitAdder 1 1 1) 
+;(0 . 0)
+;(1 . 0)
+;(1 . 0)
+;(0 . 1)
+;(1 . 0)
+;(0 . 1)
+;(0 . 1)
+;(1 . 1)
+
+
+;Q3.1 (4 points)
+(define tail (lambda (lst)
+
+;Q3.2 (4 points)
+(define rmtail (lambda (lst)
+
+;Q3.3 (4 points)
+
+
+;Q3.4 (14 points)
+(define X1 '(0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0) )	
+(define X2 '(1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1) )	
+(define X3 '(0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1) )	
+(define X4 '(1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0) )
+(define X5 '(0 1 0 1 0 1 0 1 0 1 0 1 0 1 1 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 1 1) )	
+(define X6 '(1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 1 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 1) )
+
+(define n-bit-adder1 (lambda (L1 L2 n)
+
+(define n-bit-adderhelper1 (lambda (L1 L2 n resulti)
+
+(define n-bit-adder-carry-out (lambda (L1 L2 n resulti)
+
+;Test cases
+(newline)
+(n-bit-adder1  X1 X2 32)
+(n-bit-adder1  X3 X4 32)
+(n-bit-adder1  X5 X6 32)
+(n-bit-adder1  X2 X3 32)
+(n-bit-adder1  X4 X5 32)
+(n-bit-adder1  X1 X6 32)
+(newline)
+(n-bit-adder1  X1 X3 32)
+(n-bit-adder1  X1 X4 32)
+(n-bit-adder1  X1 X5 32)
+(n-bit-adder1  X2 X4 32)
+(n-bit-adder1  X2 X5 32)
+(n-bit-adder1  X2 X6 32)
+
+;((0) 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1)
+;((0) 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1)
+;((1) 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0)
+;((1) 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 0)
+;((1) 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1)
+;((0) 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 1 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 1)
+
+;((0) 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1)
+;((0) 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0)
+;((0) 0 1 0 1 0 1 0 1 0 1 0 1 0 1 1 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 1 1)
+;((1) 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 0 1)
+;((1) 0 1 0 1 0 1 0 1 0 1 0 1 0 1 1 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 1 0)
+;((1) 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 1 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0)
+
+
+
